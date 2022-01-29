@@ -1,8 +1,53 @@
+@import url("https://unpkg.com/@rose-pine/palette/css/rose-pine.css");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:400&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+
+  background-color: var(--rose-main-base);
+  font-family: "Work Sans", sans-serif;
+  color: var(--rose-main-subtle);
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#card {
+  background-color: var(--rose-main-surface);
+  padding: 1.3rem;
+  padding-top: 1rem;
+  padding-bottom: 0.7rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  max-width: 30rem;
+
+  display: flex;
+  flex-direction: row;
+}
+
+#card-image {
+  border-radius: 0.5rem;
+  margin-right: 2rem;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  color: var(--rose-main-text);
 }
