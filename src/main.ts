@@ -4,10 +4,6 @@ import { Activity } from "./typings";
 import { CONTENT } from "./content";
 
 const USER_ID = "335394597763153920";
-const LANYARD_DATA = (await getLanyardData(USER_ID)).activities;
-const ACTIVITY = LANYARD_DATA.find((activity: Activity) =>
-  [0, 2].includes(activity.type)
-);
 
 const getImage = (activity?: Activity) => {
   if (!activity) return "https://i.stack.imgur.com/y9DpT.jpg";
@@ -40,7 +36,14 @@ const updateData = (activity?: Activity) => {
   CONTENT[1].textContent = getDescription(activity);
 };
 
-updateData(ACTIVITY);
+getLanyardData(USER_ID).then(
+  async (data) =>
+    await updateData(
+      data.activities.find((activity: Activity) =>
+        [0, 2].includes(activity.type)
+      )
+    )
+);
 
 setInterval(async () => {
   const LANYARD_DATA = (await getLanyardData(USER_ID)).activities;
