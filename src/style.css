@@ -29,6 +29,7 @@ body {
 
   display: flex;
   flex-direction: row;
+  white-space: pre-wrap;
 }
 
 #card-image {
