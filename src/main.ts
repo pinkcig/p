@@ -6,6 +6,7 @@ import { USER_ID, POP } from "./content";
 document.addEventListener("DOMContentLoaded", () => {
   POP.play();
 
+  document.addEventListener('click', () => POP.play());
   document
     .querySelectorAll(".card")
     .forEach((card) => card.addEventListener("mouseenter", () => POP.play()));
