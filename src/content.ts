@@ -1,6 +1,7 @@
 import { IActivityContent } from "./typings";
 
 const USER_ID = "335394597763153920";
+const POP = new Audio("pop.mp3");
 const APPLICATIONS_RESPONSES: Record<string, IActivityContent> = {
   Spotify: {
     state: (state?: string) => `By ${state}`,
@@ -12,4 +13,4 @@ const APPLICATIONS_RESPONSES: Record<string, IActivityContent> = {
   },
 };
 
-export { APPLICATIONS_RESPONSES, USER_ID };
+export { APPLICATIONS_RESPONSES, USER_ID, POP };
