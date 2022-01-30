@@ -15,24 +15,32 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   min-height: 100vh;
 }
 
-#card {
-  background-color: var(--rose-main-surface);
-  padding: 1.3rem;
-  padding-top: 1rem;
-  padding-bottom: 0.7rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  max-width: 30rem;
-
+.container {
   display: flex;
   flex-direction: row;
-  white-space: pre-wrap;
 }
 
-#card-image {
+.card {
+  background-color: var(--rose-main-surface);
+  padding: 1.3rem;
+  border-radius: 0.5rem;
+  box-shadow: 16px 12px rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  flex-direction: column;
+  white-space: pre-wrap;
+  transition: all 0.5s ease-in-out;
+}
+
+.card:hover {
+  transform: translate(-1rem, -1rem);
+}
+
+img {
   border-radius: 0.5rem;
   margin-right: 2rem;
 }
@@ -41,6 +49,24 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.center > p {
+    margin: 0rem;
+}
+
+.center > p:last-child  {
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: var(--rose-main-iris);
+}
+
+hr {
+  width: 100%;
+  color: var(--rose-main-highlight-med);
+  border-style: groove;
 }
 
 h1,
