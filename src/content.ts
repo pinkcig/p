@@ -1,6 +1,7 @@
 import { IActivityContent } from "./typings";
 
-const CONTENT: Record<string, IActivityContent> = {
+const USER_ID = "335394597763153920";
+const APPLICATIONS_RESPONSES: Record<string, IActivityContent> = {
   Spotify: {
     state: (state?: string) => `By ${state}`,
     details: (details?: string) => `${details}`,
@@ -11,4 +12,4 @@ const CONTENT: Record<string, IActivityContent> = {
   },
 };
 
-export { CONTENT };
+export { APPLICATIONS_RESPONSES, USER_ID };

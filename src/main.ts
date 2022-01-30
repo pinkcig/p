@@ -1,40 +1,8 @@
 import "./style.css";
-import { getLanyardData } from "./utilities";
+import { getLanyardData, updateData } from "./utilities";
 import { Activity } from "./typings";
-import { CONTENT } from "./content";
+import { USER_ID } from "./content";
 
-const USER_ID = "335394597763153920";
-
-const getImage = (activity?: Activity) => {
-  if (!activity) return "https://i.stack.imgur.com/y9DpT.jpg";
-  if (activity.type === 2)
-    return `https://i.scdn.co/image/${
-      activity.assets.large_image?.toString().split(":")[1]
-    }`;
-  return `https://cdn.discordapp.com/app-assets/${activity.application_id}/${activity.assets.large_image}.png`;
-};
-
-const getTitle = (activity?: Activity) => {
-  if (!activity) return "Doing nothing";
-  if (activity.type === 2) return `Listening to ${activity.name}`;
-  return `Playing ${activity.name}`;
-};
-
-const getDescription = (activity?: Activity) => {
-  if (!activity) return "No details.";
-  const { state, details } = CONTENT[activity.name];
-  return `${details(activity.details)}\n${state(activity.state)}`;
-};
-
-const updateData = (activity?: Activity) => {
-  document
-    .querySelector("#card-image")
-    ?.setAttribute("src", getImage(activity));
-
-  const CONTENT = document.querySelector("#card-content")!.children!;
-  CONTENT[0].textContent = getTitle(activity);
-  CONTENT[1].textContent = getDescription(activity);
-};
 
 getLanyardData(USER_ID).then(
   async (data) =>
