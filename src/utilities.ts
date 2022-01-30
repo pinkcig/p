@@ -5,4 +5,6 @@ const getLanyardData = async (userId: string): Promise<Presence> => {
   return (await response.json()).data;
 };
 
+
+
 export { getLanyardData };

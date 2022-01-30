@@ -1,3 +1,8 @@
+export interface IActivityContent {
+  state: (state?: string) => string;
+  details: (details?: string) => string;
+}
+
 // https://github.com/200hash6955/use-lanyard
 
 export interface Presence {

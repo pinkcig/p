@@ -1,6 +1,7 @@
 import "./style.css";
 import { getLanyardData } from "./utilities";
 import { Activity } from "./typings";
+import { CONTENT } from "./content";
 
 const USER_ID = "335394597763153920";
 const LANYARD_DATA = (await getLanyardData(USER_ID)).activities;
@@ -25,13 +26,14 @@ const getTitle = (activity?: Activity) => {
 
 const getDescription = (activity?: Activity) => {
   if (!activity) return "No details.";
-  if (activity.type === 2)
-    return [`By ${activity.state}`, activity.details].join("\n");
-  return `${activity.details}\n${activity.state}`;
+  const { state, details } = CONTENT[activity.name];
+  return `${details(activity.details)}\n${state(activity.state)}`;
 };
 
 const updateData = (activity?: Activity) => {
-  document.querySelector("#card-image")?.setAttribute("src", getImage(activity));
+  document
+    .querySelector("#card-image")
+    ?.setAttribute("src", getImage(activity));
 
   const CONTENT = document.querySelector("#card-content")!.children!;
   CONTENT[0].textContent = getTitle(activity);
