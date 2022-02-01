@@ -6,6 +6,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   document.addEventListener("click", () => POP.play());
   document
-    .querySelectorAll(".card")
+    .querySelectorAll("#card")
     .forEach((card) => card.addEventListener("mouseenter", () => POP.play()));
 });
