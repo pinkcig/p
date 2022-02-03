@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 document.querySelectorAll("[data-include]").forEach(async (element) => {
   const url = `views/${element.getAttribute("data-include")}.html`;
+
   await fetch(url)
     .catch(() => null)
     .then(async (response) => {
@@ -30,7 +31,6 @@ document.querySelectorAll("[data-include]").forEach(async (element) => {
 });
 
 document.onmousemove = (event) => {
-  document.body.style.setProperty('--x',(event.clientX)+'px');
-  document.body.style.setProperty('--y',(event.clientY)+'px');
-  
-}
+  document.body.style.setProperty("--x", event.clientX + "px");
+  document.body.style.setProperty("--y", event.clientY + "px");
+};
