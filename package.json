@@ -9,5 +9,9 @@
   "devDependencies": {
     "typescript": "^4.4.4",
     "vite": "^2.7.2"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "marked": "^4.0.12"
   }
 }
