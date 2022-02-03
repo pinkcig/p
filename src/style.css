@@ -86,3 +86,21 @@ h6 {
   font-family: "Montserrat", sans-serif;
   color: var(--rose-main-text);
 }
+
+@media (min-width: 576px) {
+  #cursor {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  #cursor {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  #cursor {
+    display: block;
+  }
+}
