@@ -11,7 +11,6 @@ document.addEventListener("keydown", (event) => {
     event.preventDefault();
 });
 
-// Wait for DOM to load because it actually matters here, I believe
 document.addEventListener("DOMContentLoaded", async () => {
   await POP.play();
 
@@ -20,3 +19,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     .querySelectorAll("#card")
     .forEach((card) => card.addEventListener("mouseenter", () => POP.play()));
 });
+
+document.querySelectorAll("[data-include]").forEach(async (element) => {
+  const url = `views/${element.getAttribute("data-include")}.html`;
+  await fetch(url)
+    .catch(() => null)
+    .then(async (response) => {
+      element.innerHTML = await response!.text();
+    });
+});
+
+document.onmousemove = (event) => {
+  document.body.style.setProperty('--x',(event.clientX)+'px');
+  document.body.style.setProperty('--y',(event.clientY)+'px');
+  
+}
