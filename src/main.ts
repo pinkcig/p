@@ -16,12 +16,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   document.addEventListener("click", () => POP.play());
   document
-    .querySelectorAll("#card")
+    .querySelectorAll(".card")
     .forEach((card) => card.addEventListener("mouseenter", () => POP.play()));
 });
 
 document.querySelectorAll("[data-include]").forEach(async (element) => {
-  const url = `views/${element.getAttribute("data-include")}.html`;
+  const url = `/views/${element.getAttribute("data-include")}.html`;
 
   await fetch(url)
     .catch(() => null)

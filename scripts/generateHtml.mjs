@@ -34,7 +34,33 @@ const fileExistsAndIsNotTheSame = (filePath, content) => {
 
 const generateHtml = (path, post) => {
   const filePath = resolve(path, post.slug);
-  const html = marked(post.frontmatter.content);
+  let html = marked(post.frontmatter.content);
+
+  html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <title>${post.frontmatter.data.title}</title>
+</head>
+<body>
+  <div id="cursor"></div>
+  <nav data-include="sidebar" id="navbar"></nav>
+
+  <div id="app">
+    <article class="post card">
+      <section class="container">
+        <section>
+          <h1>${post.frontmatter.data.title}</h1>
+          <div>${html}</div>
+        </section>
+      </section>
+    </article>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>`;
 
   if (fileExistsAndIsNotTheSame(`${filePath}.html`, html)) return;
 
@@ -52,15 +78,28 @@ const generateIndex = (path, posts) => {
   <title>Posts</title>
 </head>
 <body>
-  <h1>Posts</h1>
-  <ul>
-    ${posts
-      .map(
-        (post) =>
-          `<li><a href="/posts/${post.slug}.html">${post.frontmatter.data.title}</a></li>`
-      )
-      .join("\n")}
-  </ul>
+  <div id="cursor"></div>
+  <nav data-include="sidebar" id="navbar"></nav>
+
+  <div id="app">
+    <article class="card">
+      <section class="container">
+        <section>
+          <h1>Faye's blog posts</h1>
+          <ul id="posts">
+          ${posts
+            .map(
+              (post) =>
+                `<li><a href="/posts/${post.slug}.html">${post.frontmatter.data.title}</a></li>`
+            )
+            .join("\n")}
+          </ul>
+        </section>
+      </section>
+    </article>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
 </body>
 </html>`;
 
