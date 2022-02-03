@@ -12,11 +12,16 @@ const config = {
 };
 
 // feels like a hack, but rollup docs suck
-readdirSync(resolve(__dirname, "posts"))
-  .map((file) => resolve(__dirname, "posts", file))
-  .filter((file) => !file.endsWith(".md"))
-  .forEach((file) => {
-    config.build.rollupOptions.input[`posts.${file.split(".").shift()}`] = file;
-  });
+const addToConfig = (dir) =>
+  readdirSync(resolve(__dirname, dir))
+    .map((file) => resolve(__dirname, dir, file))
+    .filter((file) => file.endsWith(".html"))
+    .forEach((file) => {
+      config.build.rollupOptions.input[`${dir}.${file.split(".").shift()}`] =
+        file;
+    });
+
+addToConfig("posts");
+addToConfig("views");
 
 module.exports = config;
