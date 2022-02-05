@@ -3,5 +3,10 @@
 
 node "scripts/generateHtml.mjs"
 
-# make prettier format all files except node_modules, .husky, .git, .gitignore, .prettierrc and yarn.lock
-prettier --write --ignore-path .prettierignore --config .prettierrc "./**/*"
+FILES=$(git diff --cached --name-only --diff-filter=ACMR | sed 's| |\\ |g')
+[ -z "$FILES" ] && exit 0
+
+echo "$FILES" | xargs prettier --write --ignore-path .prettierignore --config .prettierrc
+echo "$FILES" | xargs git add
+
+exit 0
