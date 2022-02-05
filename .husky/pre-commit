@@ -4,4 +4,4 @@
 node "scripts/generateHtml.mjs"
 
 # make prettier format all files except node_modules, .husky, .git, .gitignore, .prettierrc and yarn.lock
-prettier --write --ignore-path .prettierignore --config .prettierrc "../**/*"
+prettier --write --ignore-path .prettierignore --config .prettierrc "./**/*"
