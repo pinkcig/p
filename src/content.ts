@@ -1,3 +1,3 @@
-const POP = new Audio("/pop.mp3");
+const POP = new Audio('/pop.mp3');
 
 export { POP };
