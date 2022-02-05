@@ -189,3 +189,7 @@ h6 {
   margin-bottom: 2rem;
   margin-top: 2rem;
 }
+
+.no-overflow {
+  overflow: hidden;
+}
