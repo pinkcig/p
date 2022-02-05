@@ -1,8 +1,8 @@
 @import url('https://unpkg.com/@rose-pine/palette/css/rose-pine.css');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fira+Code:200&display=swap');
 @import url('https://unpkg.com/bootstrap-icons@1.8.0/font/bootstrap-icons.css');
-
 body {
 	padding: 0;
 	margin: 0;
@@ -60,7 +60,6 @@ h6 {
 
 .container {
 	display: flex;
-	flex-direction: row;
 	user-select: none;
 }
 
@@ -191,7 +190,50 @@ h6 {
 }
 
 .post {
-	max-width: 50vw;
+	max-width: 35vw;
 	margin-bottom: 2rem;
 	margin-top: 2rem;
+}
+
+.post p:first-child {
+	margin-top: 0;
+}
+
+.post p {
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.post img {
+	max-width: 35vw;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+	border-top-right-radius: 0.5rem;
+	border-bottom-right-radius: 0.5rem;
+	border-left: 5px solid var(--rose-main-iris);
+}
+
+.post code {
+	padding: 0.1rem 0.4rem;
+	border-radius: 0.2rem;
+	color: var(--rose-main-iris);
+	background-color: var(--rose-main-base);
+	font-family: 'Fira Code', monospace;
+	white-space: pre-wrap;
+}
+
+.post pre {
+	padding: 1em;
+	overflow-x: auto;
+	margin-top: 0px;
+	margin-bottom: 2.5rem;
+	font-size: 0.9em;
+	background-color: var(--rose-main-base);
+	border-top-right-radius: 0.5rem;
+	border-bottom-right-radius: 0.5rem;
+	border-left: 5px solid var(--rose-main-iris);
+}
+
+.post pre > code {
+	padding: 0;
 }
