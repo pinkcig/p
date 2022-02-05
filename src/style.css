@@ -224,7 +224,6 @@ h6 {
 
 .post pre {
 	padding: 1em;
-	overflow-x: auto;
 	margin-top: 0px;
 	margin-bottom: 2.5rem;
 	font-size: 0.9em;
@@ -236,4 +235,42 @@ h6 {
 
 .post pre > code {
 	padding: 0;
+}
+
+.toast {
+	min-width: 250px;
+	margin-left: -125px;
+	background-color: rgb(25, 23, 36, 0.8);
+	border: 2px solid var(--rose-main-iris-rgb);
+	color: var(--rose-main-text);
+	text-align: center;
+	border-radius: 0.5rem;
+	padding: 1rem;
+	position: fixed;
+	z-index: 1;
+	left: 50%;
+	bottom: 1.5rem;
+	animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+	from {
+		bottom: 0;
+		opacity: 0;
+	}
+	to {
+		bottom: 30px;
+		opacity: 1;
+	}
+}
+
+@keyframes fadeout {
+	from {
+		bottom: 30px;
+		opacity: 1;
+	}
+	to {
+		bottom: 0;
+		opacity: 0;
+	}
 }

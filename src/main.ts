@@ -23,6 +23,21 @@ document.querySelectorAll('[data-include]').forEach(async (element) => {
 		});
 });
 
+document.querySelectorAll('pre').forEach((element) => {
+	element.addEventListener('click', () => {
+		navigator.clipboard.writeText(element.innerText);
+		const toast = document.createElement('div');
+
+		toast.classList.add('toast');
+		toast.innerText = 'Copied to clipboard';
+
+		document.body.appendChild(toast);
+		setTimeout(() => {
+			toast.remove();
+		}, 3000);
+	});
+});
+
 document.onmousemove = (event) => {
 	document.body.style.setProperty('--x', event.clientX + 'px');
 	document.body.style.setProperty('--y', event.clientY + 'px');
