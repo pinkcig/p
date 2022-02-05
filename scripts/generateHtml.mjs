@@ -41,7 +41,7 @@ const generateHtml = (path, post) => {
   <meta property="og:url" content="https://pinkcig.xyz" />
   <meta property="og:title" content="Faye Keller" />
   <meta property="og:description" content="${post.frontmatter.data.description}" />
-  <meta property="og:image" content="https://avatars.githubusercontent.com/u/62260409?v=4" />
+  <meta property="og:image" content="favicon.ico" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
@@ -50,8 +50,9 @@ const generateHtml = (path, post) => {
   <meta property="twitter:url" content="https://pinkcig.xyz" />
   <meta property="twitter:title" content="Faye Keller" />
   <meta property="twitter:description" content="${post.frontmatter.data.description}" />
-  <meta property="twitter:image" content="https://avatars.githubusercontent.com/u/62260409?v=4" width="64" />
-</head>
+  <meta property="twitter:image" content="favicon.ico" width="64" />
+  <meta name="theme-color" content="#c4a7e7">
+  </head>
 <body style="overflow-x: hidden;">
   <div class="cursor"></div>
   <nav data-include="sidebar" class="navbar"></nav>
@@ -92,7 +93,7 @@ const generateIndex = (path, posts) => {
   <meta property="og:url" content="https://pinkcig.xyz" />
   <meta property="og:title" content="Faye Keller" />
   <meta property="og:description" content="These are my blog posts" />
-  <meta property="og:image" content="https://avatars.githubusercontent.com/u/62260409?v=4" />
+  <meta property="og:image" content="favicon.ico" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
@@ -101,8 +102,9 @@ const generateIndex = (path, posts) => {
   <meta property="twitter:url" content="https://pinkcig.xyz" />
   <meta property="twitter:title" content="Faye Keller" />
   <meta property="twitter:description" content="These are my blog posts" />
-  <meta property="twitter:image" content="https://avatars.githubusercontent.com/u/62260409?v=4" width="64" />
-</head>
+  <meta property="twitter:image" content="favicon.ico" width="64" />
+  <meta name="theme-color" content="#c4a7e7">
+  </head>
 <body class="no-overflow">
   <div class="cursor"></div>
   <nav data-include="sidebar" class="navbar"></nav>
