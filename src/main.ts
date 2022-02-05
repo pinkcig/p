@@ -15,9 +15,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   await POP.play();
 
   document.addEventListener("click", () => POP.play());
-  document
-    .querySelectorAll(".card")
-    .forEach((card) => card.addEventListener("mouseenter", () => POP.play()));
 });
 
 document.querySelectorAll("[data-include]").forEach(async (element) => {

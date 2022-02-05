@@ -27,14 +27,13 @@ body::-webkit-scrollbar-thumb {
 
 #cursor {
   position: absolute;
-  width: 9px;
-  height: 9px;
+  width: 10px;
+  height: 10px;
   border-radius: 0.5rem;
   background: var(--rose-main-iris);
   top: var(--y, 0);
   left: var(--x, 0);
   z-index: 2;
-  mix-blend-mode: difference;
 }
 
 #app {
@@ -60,10 +59,6 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease-in-out;
-}
-
-.card:hover {
-  transform: translate(-1rem, -1rem);
 }
 
 img {
@@ -129,11 +124,9 @@ h6 {
   height: 100vh;
   position: fixed;
   width: 4rem;
-  margin-left: 3rem;
-  margin-top: 3rem;
   background-color: var(--rose-main-surface);
   border-radius: 0.5rem;
-  box-shadow: 16px 12px rgba(0, 0, 0, 0.5);
+  box-shadow: 7px 0px 17px rgba(0, 0, 0, 0.3);
 }
 
 #navbar-nav {
