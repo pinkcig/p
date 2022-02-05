@@ -129,7 +129,6 @@ h6 {
 	position: fixed;
 	width: 4rem;
 	background-color: var(--rose-main-surface);
-	border-radius: 0.5rem;
 	box-shadow: 7px 0px 17px rgba(0, 0, 0, 0.3);
 }
 
