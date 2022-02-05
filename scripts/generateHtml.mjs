@@ -41,7 +41,7 @@ const generateHtml = (path, post) => {
   <meta property="og:url" content="https://pinkcig.xyz" />
   <meta property="og:title" content="Faye Keller" />
   <meta property="og:description" content="${post.frontmatter.data.description}" />
-  <meta property="og:image" content="favicon.ico" />
+  <meta property="og:image" content="logo.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
@@ -50,7 +50,7 @@ const generateHtml = (path, post) => {
   <meta property="twitter:url" content="https://pinkcig.xyz" />
   <meta property="twitter:title" content="Faye Keller" />
   <meta property="twitter:description" content="${post.frontmatter.data.description}" />
-  <meta property="twitter:image" content="favicon.ico" width="64" />
+  <meta property="twitter:image" content="logo.png" width="64" />
   <meta name="theme-color" content="#c4a7e7">
   </head>
 <body style="overflow-x: hidden;">
@@ -93,7 +93,7 @@ const generateIndex = (path, posts) => {
   <meta property="og:url" content="https://pinkcig.xyz" />
   <meta property="og:title" content="Faye Keller" />
   <meta property="og:description" content="These are my blog posts" />
-  <meta property="og:image" content="favicon.ico" />
+  <meta property="og:image" content="logo.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
@@ -102,7 +102,7 @@ const generateIndex = (path, posts) => {
   <meta property="twitter:url" content="https://pinkcig.xyz" />
   <meta property="twitter:title" content="Faye Keller" />
   <meta property="twitter:description" content="These are my blog posts" />
-  <meta property="twitter:image" content="favicon.ico" width="64" />
+  <meta property="twitter:image" content="logo.png" width="64" />
   <meta name="theme-color" content="#c4a7e7">
   </head>
 <body class="no-overflow">
