@@ -1,4 +1,12 @@
-# TODO:
+# 🔖 p
 
--   Fix ID <> Classes again, sigh.
--   Add meta data to the generated HTML
+My personal "portfolio".
+
+# 📚 stack
+
+-   Vanilla JavaScript
+    -   With Typescript
+-   Vanilla CSS
+-   HTML
+-   Vite
+-   Vercel

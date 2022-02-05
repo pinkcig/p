@@ -34,6 +34,23 @@ const generateHtml = (path, post) => {
   <meta charset="UTF-8" />
 
   <title>${post.frontmatter.data.title}</title>
+  <meta name="description" content="${post.frontmatter.data.description}" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pinkcig.xyz" />
+  <meta property="og:title" content="Faye Keller" />
+  <meta property="og:description" content="${post.frontmatter.data.description}" />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/62260409?v=4" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://pinkcig.xyz" />
+  <meta property="twitter:title" content="Faye Keller" />
+  <meta property="twitter:description" content="${post.frontmatter.data.description}" />
+  <meta property="twitter:image" content="https://avatars.githubusercontent.com/u/62260409?v=4" width="64" />
 </head>
 <body style="overflow-x: hidden;">
   <div class="cursor"></div>
@@ -67,7 +84,24 @@ const generateIndex = (path, posts) => {
 <head>
   <meta charset="UTF-8">
 
-  <title>Posts</title>
+  <title>Faye's Blog Posts</title>
+  <meta name="description" content="These are my blog posts" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pinkcig.xyz" />
+  <meta property="og:title" content="Faye Keller" />
+  <meta property="og:description" content="These are my blog posts" />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/62260409?v=4" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://pinkcig.xyz" />
+  <meta property="twitter:title" content="Faye Keller" />
+  <meta property="twitter:description" content="These are my blog posts" />
+  <meta property="twitter:image" content="https://avatars.githubusercontent.com/u/62260409?v=4" width="64" />
 </head>
 <body class="no-overflow">
   <div class="cursor"></div>
@@ -78,7 +112,7 @@ const generateIndex = (path, posts) => {
       <section class="container">
         <section>
           <h1>Faye's blog posts</h1>
-          <ul id="posts">
+          <ul class="posts">
           ${posts.map((post) => `<li><a href="/posts/${post.slug}.html">${post.frontmatter.data.title}</a></li>`).join('\n')}
           </ul>
         </section>

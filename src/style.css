@@ -174,20 +174,20 @@ h6 {
 	margin: 0 5px;
 }
 
-#posts {
+.posts {
 	padding-left: 1rem;
 }
 
-#posts li {
+.posts li {
 	text-align: left;
 }
 
-#posts li a {
+.posts li a {
 	text-decoration: none;
 	color: var(--rose-main-iris);
 }
 
-#posts li:last-child {
+.posts li:last-child {
 	margin-bottom: 1rem;
 }
 
