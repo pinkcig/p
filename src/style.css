@@ -1,7 +1,7 @@
 @import url('https://unpkg.com/@rose-pine/palette/css/rose-pine.css');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400&display=swap');
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://unpkg.com/bootstrap-icons@1.8.0/font/bootstrap-icons.css');
 
 body {
 	padding: 0;
@@ -140,6 +140,7 @@ h6 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	height: 100%;
 }
 
 .nav-link {
@@ -152,23 +153,25 @@ h6 {
 	transition: all 0.5s ease-out !important;
 }
 
-.nav-link {
-	display: flex;
-	align-items: center;
-	height: 4rem;
-	color: var(--rose-main-text);
-	text-decoration: none;
-	cursor: none;
-}
-
-.nav-link .material-icons {
+.icon {
 	font-size: 2rem;
 	margin: 0 1rem;
 	transition: ease-out 0.2s;
 }
 
-.nav-link .material-icons:hover {
+.icon:hover {
 	filter: brightness(150%);
+}
+
+.socials a {
+	color: var(--rose-main-text);
+	text-decoration: none;
+	cursor: none;
+}
+
+.socials .icon {
+	font-size: 1rem;
+	margin: 0 5px;
 }
 
 #posts {
