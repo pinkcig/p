@@ -181,8 +181,14 @@ h6 {
 }
 
 .posts li a {
-	text-decoration: none;
+	text-decoration: underline 0.15em rgba(0, 0, 0, 0);
 	color: var(--rose-main-iris);
+	transition: text-decoration-color 0.5s ease-out;
+	cursor: none;
+}
+
+.posts li a:hover {
+	text-decoration-color: var(--rose-main-iris);
 }
 
 .posts li:last-child {
