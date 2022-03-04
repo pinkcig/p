@@ -1,9 +1,9 @@
 #! /usr/bin/env node
-import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
-import { resolve } from 'node:path';
-import { success, warn, info } from './utils.mjs';
 import { default as parseFrontMatter } from 'gray-matter';
 import { marked } from 'marked';
+import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+import { info, success, warn } from './utils.mjs';
 
 const ensureDirectoryExists = (path) => {
 	if (!existsSync(path)) {
@@ -49,7 +49,6 @@ const generateHtml = (path, post) => {
   <meta name="theme-color" content="#c4a7e7">
   </head>
 <body style="overflow-x: hidden;">
-  <div class="cursor"></div>
   <nav data-include="sidebar" class="navbar"></nav>
 
   <div id="app">
@@ -96,7 +95,6 @@ const generateIndex = (path, posts) => {
   <meta name="theme-color" content="#c4a7e7">
   </head>
 <body class="no-overflow">
-  <div class="cursor"></div>
   <nav data-include="sidebar" class="navbar"></nav>
 
   <div id="app">

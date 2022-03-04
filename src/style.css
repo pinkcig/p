@@ -3,10 +3,14 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Fira+Code:200&display=swap');
 @import url('https://unpkg.com/bootstrap-icons@1.8.0/font/bootstrap-icons.css');
+
+* {
+	cursor: url(/cursor.svg), auto;
+}
+
 body {
 	padding: 0;
 	margin: 0;
-	cursor: none;
 
 	background-color: var(--rose-main-base);
 	font-family: 'Work Sans', sans-serif;
@@ -41,17 +45,6 @@ h6 {
 	align-items: center;
 	flex-direction: column;
 	min-height: 100vh;
-}
-
-.cursor {
-	position: fixed;
-	width: 10px;
-	height: 10px;
-	border-radius: 0.5rem;
-	background: var(--rose-main-iris);
-	top: var(--y, 0);
-	left: var(--x, 0);
-	z-index: 2;
 }
 
 .no-overflow {
@@ -105,24 +98,6 @@ h6 {
 	color: var(--rose-main-iris);
 }
 
-@media (min-width: 576px) {
-	.cursor {
-		display: none;
-	}
-}
-
-@media (min-width: 768px) {
-	.cursor {
-		display: none;
-	}
-}
-
-@media (min-width: 992px) {
-	.cursor {
-		display: block;
-	}
-}
-
 .navbar {
 	height: 100vh;
 	position: fixed;
@@ -147,7 +122,6 @@ h6 {
 	height: 4rem;
 	color: var(--rose-main-text);
 	text-decoration: none;
-	cursor: none;
 	transition: all 0.5s ease-out !important;
 }
 
@@ -164,7 +138,6 @@ h6 {
 .socials a {
 	color: var(--rose-main-text);
 	text-decoration: none;
-	cursor: none;
 }
 
 .socials .icon {
@@ -184,7 +157,6 @@ h6 {
 	text-decoration: underline 0.15em rgba(0, 0, 0, 0);
 	color: var(--rose-main-iris);
 	transition: text-decoration-color 0.5s ease-out;
-	cursor: none;
 }
 
 .posts li a:hover {
