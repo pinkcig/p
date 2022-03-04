@@ -1,5 +1,5 @@
-import './style.css';
 import { POP } from './content';
+import './style.css';
 
 // Avoid people opening devtools because I'm a bitch
 document.addEventListener('contextmenu', (event) => event.preventDefault());
@@ -37,8 +37,3 @@ document.querySelectorAll('pre').forEach((element) => {
 		}, 3000);
 	});
 });
-
-document.onmousemove = (event) => {
-	document.body.style.setProperty('--x', event.clientX + 'px');
-	document.body.style.setProperty('--y', event.clientY + 'px');
-};
