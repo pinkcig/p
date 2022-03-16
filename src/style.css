@@ -105,6 +105,12 @@ h6 {
 	box-shadow: 7px 0px 17px rgba(0, 0, 0, 0.3);
 }
 
+@media screen and (max-width: 768px) {
+	.card {
+		margin: 1rem;
+	}
+}
+
 .navbar-nav {
 	list-style: none;
 	padding: 0;
@@ -141,7 +147,7 @@ h6 {
 
 .socials .icon {
 	font-size: 1rem;
-	margin: 0 5px;
+	margin: 0 1px;
 }
 
 .posts {
