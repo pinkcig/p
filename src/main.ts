@@ -17,7 +17,7 @@ document.querySelectorAll('[data-include]').forEach(async (element) => {
 	const url = `/views/${element.getAttribute('data-include')}.html`;
 
 	await fetch(url)
-		.catch(() => null)
+		.catch(() => void 0)
 		.then(async (response) => {
 			element.innerHTML = await response!.text();
 		});

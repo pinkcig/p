@@ -32,6 +32,9 @@ const generateHtml = (path, post) => {
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <link rel="icon" href="favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 
   <title>${post.frontmatter.data.title}</title>
   <meta name="description" content="${post.frontmatter.data.description}" />
@@ -78,6 +81,9 @@ const generateIndex = (path, posts) => {
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" href="favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 
   <title>Faye's Blog Posts</title>
   <meta name="description" content="These are my blog posts" />
