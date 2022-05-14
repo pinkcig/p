@@ -1,114 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<link rel="icon" href="favicon.ico" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<!-- Primary Meta Tags -->
-		<title>Faye Keller</title>
-		<meta name="title" content="Faye Keller" />
-		<meta name="description" content="Software engineer, bookworm, and quite possibly a lunatic" />
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" href="favicon.ico" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<!-- Open Graph / Facebook -->
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://pinkcig.xyz" />
-		<meta property="og:title" content="Faye Keller" />
-		<meta property="og:description" content="Software engineer, bookworm, and quite possibly a lunatic" />
-		<meta property="og:image" content="/logo.png" />
-		<meta property="og:image:type" content="image/png" />
-		<meta property="og:image:width" content="250" />
-		<meta property="og:image:height" content="250" />
+	<!-- Primary Meta Tags -->
+	<title>Faye Keller</title>
+	<meta name="title" content="Faye Keller" />
+	<meta name="description" content="Software engineer, bookworm, and quite possibly a lunatic" />
 
-		<meta name="theme-color" content="#FFFFFF" />
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://pinkcig.xyz" />
+	<meta property="og:title" content="Faye Keller" />
+	<meta property="og:description" content="Software engineer, bookworm, and quite possibly a lunatic" />
+	<meta property="og:image" content="/logo.png" />
+	<meta property="og:image:type" content="image/png" />
+	<meta property="og:image:width" content="250" />
+	<meta property="og:image:height" content="250" />
 
-		<style>
+	<meta name="theme-color" content="#FFFFFF" />
+
+	<style>
+		body {
+			margin: 40px auto;
+			max-width: 650px;
+			line-height: 1.6;
+			font-size: 18px;
+			color: #444;
+			padding: 0 10px;
+			background-color: #eeeeee;
+		}
+
+		@media (prefers-color-scheme: dark) {
 			body {
-				margin: 40px auto;
-				max-width: 650px;
-				line-height: 1.6;
-				font-size: 18px;
-				color: #444;
-				padding: 0 10px;
-				background-color: #eeeeee;
-			}
-
-			@media (prefers-color-scheme: dark) {
-				body {
-					background-color: #222222;
-					color: #fff;
-				}
-
-				a {
-					color: #fff;
-				}
-			}
-
-			@media (max-width: 600px) {
-				body {
-					padding: 2rem;
-				}
-			}
-
-			h1,
-			h2,
-			h3 {
-				line-height: 1.2;
+				background-color: #222222;
+				color: #fff;
 			}
 
 			a {
-				color: #444;
-				text-decoration-style: dashed;
-				text-underline-offset: 2px;
+				color: #fff;
 			}
-		</style>
-	</head>
-	<body>
-		<header>
-			<h1>👩 Faye Keller</h1>
-			<aside id="quote"></aside>
-		</header>
+		}
 
-		<div>
-			<h1>🧶 About</h1>
-			<p>I'm a 16 years old girl with a passion for <em>technology</em>, <em>xianxia books</em>, and <em>music</em> that hails from <em>Italy</em> (∩︵∩)</p>
-			<p>I can speak <em>English</em> and <em>Italian</em> fluently, and I have some rudimentary knowledge of <em>French</em> and <em>Spanish</em> (^人^)</p>
-		</div>
+		@media (max-width: 600px) {
+			body {
+				padding: 2rem;
+			}
+		}
 
-		<div>
-			<h1>🔗 Connect</h1>
-			<p>Response <em>won't</em> be immediate as I'm busy/occupied most of the time, but one day I'll get back to you (シ_ _)シ</p>
-			<ul>
-				<li>
-					<a href="https://github.com/pinkcig">Github</a>
-				</li>
-				<li>
-					<a href="https://twitter.com/pinkcig_">Twitter</a>
-				</li>
-				<li>
-					<a href="https://discord.gg/f2SCdEGx6K">Discord</a>
-				</li>
-			</ul>
-		</div>
+		h1,
+		h2,
+		h3 {
+			line-height: 1.2;
+		}
 
-		<hr />
-		<div>
-			<a href="http://bettermotherfuckingwebsite.com/">Inspiration</a> ‒
-			<a href="https://en.wikipedia.org/wiki/Xianxia_(genre)">What's xianxia</a>
-		</div>
-	</body>
-	<script defer>
-		const quotes = [
-			'If you believe it to be a sea of bitterness, then a sea of bitterness it is. If you believe it to simply be scenery on the path of life, then scenery it is…. The sea of bitterness never ends, but the scenery does',
-			'In this life I hope to become the real moon, rising above the mountains and heavens, toying with the clouds and seas, following the ancient times and walk in the darkness above the various heavens',
-			'Life and death is nature’s law. All living beings are equal, and everyone has their right to survive and be killed. There might be royalty and lower beings, but in face of death, a person’s death is no different from a pig’s, what’s the difference? They’re both dead',
-			'This was the harshness of reality, and also the beauty of fate. In this world, everyone is a main character, but everyone is also a side character',
-			'I know the heavens better than you',
-			'Life is already so damn bitter... coffee at least, should be sweet',
-			'Festivals promote diversity, they bring neighbors into dialogue, they increase creativity, they offer opportunities for civic pride, they improve our general psychological well-being. In short, they make cities better places to live.',
-			'I put for the general inclination of all mankind, a perpetual and restless desire of power after power, that ceaseth only in death.',
-		];
+		a {
+			color: #444;
+			text-decoration-style: dashed;
+			text-underline-offset: 2px;
+		}
+	</style>
+</head>
 
-		document.getElementById('quote').innerText = `“${quotes[Math.floor(Math.random() * quotes.length)]}”`;
-	</script>
+<body>
+	<header>
+		<h1>👩 Faye Keller</h1>
+		<aside id="quote"></aside>
+	</header>
+
+	<div>
+		<h1>🧶 About</h1>
+		<p>I'm a 16 years old girl with a passion for <em>technology</em>, <em>xianxia books</em>, and <em>music</em>
+			that hails from <em>Italy</em> (∩︵∩)</p>
+		<p>I can speak <em>English</em> and <em>Italian</em> fluently, and I have some rudimentary knowledge of
+			<em>French</em> and <em>Spanish</em> (^人^)
+		</p>
+	</div>
+
+	<div>
+		<h1>🔗 Connect</h1>
+		<p>Response <em>won't</em> be immediate as I'm busy/occupied most of the time, but one day I'll get back to you
+			(シ_ _)シ</p>
+		<ul>
+			<li>
+				<a rel="noreferrer" target="_blank" href="https://github.com/pinkcig"
+				>Github</a>
+			</li>
+			<li>
+				<a rel="noreferrer" target="_blank" href="https://twitter.com/pinkcig_">Twitter</a>
+			</li>
+			<li>
+				<a rel="noreferrer" target="_blank" href="https://discord.gg/f2SCdEGx6K">Discord</a>
+			</li>
+		</ul>
+	</div>
+
+	<hr />
+	<div>
+		<a rel="noreferrer" target="_blank" href="http://bettermotherfuckingwebsite.com/">Inspiration</a> ‒
+		<a rel="noreferrer" target="_blank" href="https://en.wikipedia.org/wiki/Xianxia_(genre)">What's xianxia</a>
+	</div>
+</body>
+<script defer>
+	const quotes = [
+		'If you believe it to be a sea of bitterness, then a sea of bitterness it is. If you believe it to simply be scenery on the path of life, then scenery it is…. The sea of bitterness never ends, but the scenery does',
+		'In this life I hope to become the real moon, rising above the mountains and heavens, toying with the clouds and seas, following the ancient times and walk in the darkness above the various heavens',
+		'Life and death is nature’s law. All living beings are equal, and everyone has their right to survive and be killed. There might be royalty and lower beings, but in face of death, a person’s death is no different from a pig’s, what’s the difference? They’re both dead',
+		'This was the harshness of reality, and also the beauty of fate. In this world, everyone is a main character, but everyone is also a side character',
+		'I know the heavens better than you',
+		'Life is already so damn bitter... coffee at least, should be sweet',
+		'Festivals promote diversity, they bring neighbors into dialogue, they increase creativity, they offer opportunities for civic pride, they improve our general psychological well-being. In short, they make cities better places to live.',
+		'I put for the general inclination of all mankind, a perpetual and restless desire of power after power, that ceaseth only in death.',
+	];
+
+	document.getElementById('quote').innerText = `“${quotes[Math.floor(Math.random() * quotes.length)]}”`;
+</script>
+
 </html>
