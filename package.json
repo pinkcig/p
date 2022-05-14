@@ -3,7 +3,7 @@
 	"version": "0.0.0",
 	"scripts": {
 		"format": "prettier --write '**/*.{js,json,md,yml,html}'",
-		"build": "html-minifier-terser --collapse-whitespace --remove-comments --minify-js --minify-css -o public/index.html public/index.html",
+		"build": "html-minifier-terser --collapse-whitespace --remove-comments --minify-js --minify-css -o public/index.html public/index.html"
 	},
 	"devDependencies": {
 		"html-minifier-terser": "^7.0.0-alpha.2",
