@@ -3,6 +3,5 @@ node_modules
 .gitignore
 yarn.lock
 .husky
-public
 .prettierignore
 dist
