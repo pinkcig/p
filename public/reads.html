@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" href="favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Primary Meta Tags -->
+		<title>Faye Keller</title>
+		<meta name="title" content="Faye Keller" />
+		<meta name="description" content="Software engineer, bookworm, and quite possibly a lunatic" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://pinkcig.xyz" />
+		<meta property="og:title" content="Faye Keller" />
+		<meta property="og:description" content="Software engineer, bookworm, and quite possibly a lunatic" />
+		<meta property="og:image" content="/logo.png" />
+		<meta property="og:image:type" content="image/png" />
+		<meta property="og:image:width" content="250" />
+		<meta property="og:image:height" content="250" />
+
+		<meta name="theme-color" content="#eeeeee" />
+
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+			body {
+				margin: 40px auto;
+				max-width: 650px;
+				line-height: 1.6;
+				font-size: 18px;
+				font-family: 'Roboto Mono', sans-serif;
+				font-weight: bold;
+				color: #444;
+				padding: 0 10px;
+				background-color: #eeeeee;
+			}
+
+			body::-webkit-scrollbar {
+				width: 0.25rem;
+			}
+
+			body::-webkit-scrollbar-thumb {
+				background: #444;
+			}
+
+			a {
+				color: #444;
+				text-decoration-style: dashed;
+				text-underline-offset: 2px;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				body {
+					background-color: #222222;
+					color: #fff;
+				}
+
+				a {
+					color: #fff;
+				}
+
+				body::-webkit-scrollbar-thumb {
+					background: #fff;
+				}
+			}
+
+			@media (max-width: 600px) {
+				body {
+					padding: 2rem;
+				}
+			}
+
+			h1,
+			h2,
+			h3 {
+				line-height: 1.2;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<h1>📚 Novels</h1>
+			<aside>This is an approximate bare-bones list that does not conform with everything I've read in the past, as I have never kept track of it, and it is mostly meant as a reminder for myself.</aside>
+		</header>
+
+		<div>
+			<ul id="novels"></ul>
+		</div>
+
+		<div>
+			<p>Some novels I want to read:</p>
+			<ul id="to-read-novels"></ul>
+		</div>
+
+		<hr />
+		<div>
+			<a href="/" target="_blank" rel="noopener noreferrer">Home</a>
+		</div>
+	</body>
+
+	<script defer>
+		const novels = {
+			read: [
+				'https://www.novelupdates.com/series/heavenly-jewel-change',
+				'https://www.novelupdates.com/series/i-shall-seal-the-heavens',
+				'https://www.novelupdates.com/series/a-will-eternal',
+				'https://www.wuxiaworld.com/novel/child-of-light',
+				'https://www.wuxiaworld.com/novel/ancient-strengthening-technique',
+				'https://www.wuxiaworld.com/novel/battle-through-the-heavens',
+				'https://www.wuxiaworld.com/novel/tales-of-demons-and-gods',
+				'https://www.novelupdates.com/series/ancient-godly-monarch/',
+			],
+			toRead: ['https://www.novelupdates.com/series/god-of-slaughter', 'https://www.novelupdates.com/series/otherworldly-evil-monarch'],
+		};
+
+		const novelsList = document.getElementById('novels');
+		const toReadNovelsList = document.getElementById('to-read-novels');
+
+		for (const [key, value] of Object.entries(novels)) {
+			for (const novel of value) {
+				const li = document.createElement('li');
+				const a = document.createElement('a');
+
+				a.href = novel;
+				a.target = '_blank';
+				a.rel = 'noopener noreferrer';
+				a.innerText = titlify(novel.split('/').pop());
+				li.appendChild(a);
+
+				key === 'read' ? novelsList.appendChild(li) : toReadNovelsList.appendChild(li);
+			}
+		}
+
+		function titlify(str) {
+			if (str.endsWith('/')) str = str.slice(0, -1);
+			return str.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase());
+		}
+	</script>
+</html>
