@@ -3,7 +3,7 @@
 	"version": "0.0.0",
 	"scripts": {
 		"format": "prettier --write public/index.html",
-		"build": "node ./scripts/build.js"
+		"build": "node scripts/build.js"
 	},
 	"devDependencies": {
 		"html-minifier-terser": "^7.0.0-alpha.2",
